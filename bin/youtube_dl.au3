@@ -129,7 +129,7 @@ func file()
 	$url = GUICtrlRead($input1)
     $custset = GUICtrlRead($input2)
 	GUICtrlSetData($progress1, 10)
-	FileWrite ( "pull.bat", "python __main__.py  ")
+	FileWrite ( "pull.bat", "python bin/__main__.py  ")
 	GUICtrlSetData($progress1, 20)
 	FileWrite ( "pull.bat", $url  )
     GUICtrlSetData($progress1, 20)
@@ -158,6 +158,6 @@ Func auth()
 	ConsoleWrite('@@ (150) :(' & @MIN & ':' & @SEC & ') custSpam()' & @CR) ;### Function Trace
 	GUICtrlSetData($progress1, 0)
 	$rndvarprog = False
-	RunWait("flags.bat")
+	RunWait("bin/flags.bat")
 	emergencyStop()
 EndFunc  
